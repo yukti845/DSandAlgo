@@ -1,3 +1,4 @@
+
 class Hashtable:
     def __init__(self):
         self.bucket = 16
@@ -43,6 +44,7 @@ print(h)
 h.remove('apples')
 print(h)
 
+
 # First recurring character
 
 def func(mylist):
@@ -54,3 +56,13 @@ def func(mylist):
 
 def hashtables(mylist):
     mydict = {}
+    for i in range(len(mylist)):
+        if mylist[i] in mydict:
+            return mylist[i]
+        else:
+            mydict[mylist[i]] = i
+    return 0
+
+mylist = [2,1,1,2,3,4,5]
+x = hashtables(mylist)
+print(x)
