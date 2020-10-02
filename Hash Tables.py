@@ -42,3 +42,15 @@ print(h.get('grapes'))
 print(h)
 h.remove('apples')
 print(h)
+
+# First recurring character
+
+def func(mylist):
+    for i in range(len(mylist)):
+        for j in range(i+1, len(mylist)):
+            if mylist[i] == mylist[j]:
+                return mylsit[i]
+    return 0
+
+def hashtables(mylist):
+    mydict = {}
