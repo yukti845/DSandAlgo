@@ -1,0 +1,141 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node{
+int data;
+struct Node *next;
+};
+
+struct Node *add_to_head(struct Node *head,int data)
+{
+struct Node *t= (struct Node *)malloc(sizeof(struct Node));
+t->data= data;
+t->next= head;
+return t;
+}
+void print(struct Node *head)
+{
+while(head != NULL)
+{
+printf("%d\t",head->data);
+head= head->next;
+}
+}
+void print_reverse(struct Node *head)
+{
+if(head== NULL) return;
+print_reverse(head->next);
+printf("%d\t",head->data);
+}
+void find_middle(struct Node *head)
+{
+if(head== NULL)
+printf("List is empty!!!\n");
+struct Node *s,*f;
+s=f= head;
+while(f!= NULL && f->next != NULL)
+{
+s= s->next;
+f= f->next->next;
+}
+printf("%d\n",s->data);
+}
+
+bool  find_loop(struct Node *head)
+{
+struct Node *s,*f;
+if(head== NULL) return false;
+s=f=head;
+while(f!= NULL && f->next!= NULL)
+{
+s= s->next;
+f= f->next->next;
+if(s== f) return true;
+}
+return false;
+}
+
+/* Merge of 2 sorted linked lists
+ I will share 2 approaches
+1. Recursive approach
+*/
+struct Node * merging_recursive(struct Node *A,struct Node *B)
+{
+struct Node *h;
+h= NULL;
+if(A==NULL) return B;
+if(B== NULL) return A;
+
+if(A->data < B->data)
+{
+h= A;
+h->next= merging_recursive(A->next,B);
+}
+else
+{
+h= B;
+h->next= merging_recursive(A,B->next);
+}
+return h;
+}
+
+
+// Merge sorted linked list without using additional space and O(m+n) time complexity and O(1) space complexity...
+struct Node *merge_iterative(struct Node *A,struct Node *B)
+{
+struct Node *h3,*h,*new_head;
+h= (struct Node *)malloc(sizeof(struct Node));
+new_head= h;
+while(A!= NULL && B!= NULL)
+{
+    if(A->data < B->data)
+    {
+    h->next= A;
+    A= A->next;
+    }
+    else
+    {
+    h->next= B;
+    B= B->next;
+    }
+    // move head to the now current element
+    h= h->next;
+}
+
+if(A== NULL)
+{
+h->next = B;
+}
+else h->next= A;
+
+h= new_head;
+new_head= new_head->next;
+
+free(h);
+return new_head;
+}
+int main()
+{
+    struct Node *h3,*h1,*h2;
+    int i,j,k;
+    bool ans;
+    h1= h2=h3= NULL;
+    // Adding to the head of linked list..
+    h1= add_to_head(h1,40);
+    h1= add_to_head(h1,30);
+     h1= add_to_head(h1,10);
+     printf("List A is :\n");
+     print(h1);
+
+    h2= add_to_head(h2,134);
+    h2= add_to_head(h2,67);
+    h2= add_to_head(h2,37);
+    h2= add_to_head(h2,36);
+    printf("\nList B is :\n");
+    print(h2);
+    //h3= merging_recursive(h1,h2);
+    h3= merge_iterative(h1,h2);
+    printf("\nNew merged list ::\n");
+    print(h3);
+    return 0;
+}
