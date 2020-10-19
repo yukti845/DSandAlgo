@@ -40,6 +40,22 @@ class linked_list
 			new_node->next = head;
 			head = new_node;
 		}
+		//Deleting a node when given data of the node
+		void delete_node(int value)
+		{
+			temp = head;
+			int i=0;
+			if(value==head->data)
+			{
+				head = head->next;
+				break;
+			}
+			if(temp=tail->data)
+			{
+				temp->next = temp->next->next;
+				break;
+			}
+		}
 		void display()
 		{
 			Node *temp = head;
