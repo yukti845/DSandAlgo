@@ -78,6 +78,20 @@ class linked_list
 				count++;
 			}
 		}
+		//function to reverse the linked list
+		void reverse()
+		{
+			Node* current = head;
+			Node *prev = NULL, *next = NULL;
+			while(current != NULL)
+			{
+				next = current->next;
+				current->next = prev;
+				prev = current;
+				current = next;
+			}
+			head = prev;
+		}
 		void display()
 		{
 			Node *temp = head;
@@ -100,6 +114,8 @@ void main()
 	l.display();
 	l.delete_node(1);
 	l.delete_node(3);
+	l.display();
+	l.reverse();
 	l.display();
 	getch();
 }
