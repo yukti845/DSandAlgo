@@ -63,6 +63,21 @@ class linked_list
 				free(temp);
 			}
 		}
+		// Search for the given node in the list and return its index
+		void search(int value)
+		{
+			Node* temp = head;
+			int index = 0;
+			while(temp != NULL)
+			{
+				if(temp->data == NULL)
+				{
+					cout<<count;
+				}
+				temp = temp->next;
+				count++;
+			}
+		}
 		void display()
 		{
 			Node *temp = head;
