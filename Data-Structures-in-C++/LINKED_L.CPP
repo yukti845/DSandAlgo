@@ -41,14 +41,16 @@ class linked_list
 			head = new_node;
 		}
 		//Deleting a node when given data of the node
-		Node* delete_node(int value)
+		void delete_node(int value)
 		{
-			current = head;
-			previous = NULL;
-			if(head==NULL)
+			Node* temp = head;
+			Node* prev;
+			if(temp!=NULL && temp->data == value)
 			{
-				print("List is empty");
+				head = temp->next;
+				free(temp);
 			}
+			
 		void display()
 		{
 			Node *temp = head;
