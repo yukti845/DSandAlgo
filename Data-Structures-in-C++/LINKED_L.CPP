@@ -50,7 +50,13 @@ class linked_list
 				head = temp->next;
 				free(temp);
 			}
-			
+			// Searching of the node to be deleted while
+			// keeping the record of the previous node
+			while(temp != NULL && temp->data != value)
+			{
+				prev = temp;
+				temp = temp->next;
+			}
 		void display()
 		{
 			Node *temp = head;
