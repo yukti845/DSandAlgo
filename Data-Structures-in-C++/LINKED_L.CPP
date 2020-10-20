@@ -57,6 +57,12 @@ class linked_list
 				prev = temp;
 				temp = temp->next;
 			}
+			if(temp == NULL)
+			{
+				prev->next = temp->next;
+				free(temp);
+			}
+		}
 		void display()
 		{
 			Node *temp = head;
@@ -76,6 +82,9 @@ void main()
 	l.add_node_end(3);
 	l.add_node_begin(4);
 	l.add_node_begin(9);
+	l.display();
+	l.delete_node(1);
+	l.delete_node(3);
 	l.display();
 	getch();
 }
