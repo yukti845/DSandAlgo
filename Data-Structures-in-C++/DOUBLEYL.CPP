@@ -76,6 +76,11 @@ class doubly_linked_list
 				return;
 			}
 		}
+		else if(head->data != value && head->next == NULL)
+		{
+			cout<<"Node not found";
+			return;
+		}
 	void display()
 	{
 		Node* temp = head;
