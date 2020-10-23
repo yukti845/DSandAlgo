@@ -131,6 +131,8 @@ void main()
 	d.insert_begin(1);
 	d.insert_begin(3);
 	d.display();
+	d.delete_node(5);
+	d.display();
 	getch();
 }
 
