@@ -81,6 +81,25 @@ class doubly_linked_list
 			cout<<"Node not found";
 			return;
 		}
+		current = head;
+		while(current->next != NULL && current ->data != value)
+		{
+			prev_node = current;
+			current= current->next;
+			if(current->data == value)
+			{
+				prev_node->next = prev_node->next->next;
+				if(prev_node->next != NULL)
+				{
+					prev_node->next->prev = prev_node;
+				}
+				else
+				tail = prev_node;
+			}
+			else
+			cout<<"Node not found";
+		}
+	}
 	void display()
 	{
 		Node* temp = head;
