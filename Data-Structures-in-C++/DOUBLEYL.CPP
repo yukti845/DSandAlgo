@@ -53,6 +53,29 @@ class doubly_linked_list
 			new_node->prev = temp;
 		}
 	}
+	void delete_node(int value)
+	{
+		Node* current;
+		Node* prev_node;
+		if(head==NULL)
+		{
+			cout<<"There's no node in the linked list.";
+		}
+		if(head->data == value)
+		{
+			if(head->next != NULL)
+			{
+				head->next->prev = NULL;
+				head = head->next;
+				return;
+			}
+			else
+			{
+				head = NULL;
+				cout<<"\nList is empty now ";
+				return;
+			}
+		}
 	void display()
 	{
 		Node* temp = head;
