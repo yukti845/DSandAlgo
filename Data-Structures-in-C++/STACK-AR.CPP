@@ -13,7 +13,16 @@ void push(int value)
 		stack[top] = value;
 	}
 }
-
+void pop()
+{
+	if(top<=-1)
+	cout<<"Stack Underflow"<<endl;
+	else
+	{
+		cout<<"The popped element is "<<stack[top]<<endl;
+		top--;
+	}
+}
 void display()
 {
 	if(top>=0)
