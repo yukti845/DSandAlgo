@@ -65,3 +65,18 @@ class Stack
 		cout<<endl;
 	}
 };
+void main()
+{
+	Stack s;
+	clrscr();
+	s.push(56);
+	s.push(72);
+	s.push(3);
+	s.push(80);
+	s.push(19);
+	s.display();
+	s.top();
+	s.pop();
+	s.display();
+	getch();
+}
