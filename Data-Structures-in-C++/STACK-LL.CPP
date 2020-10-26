@@ -46,3 +46,22 @@ class Stack
 	{
 		cout<<head->data<<endl;
 	}
+	void display()
+	{
+		Node* temp;
+		if(head == NULL)
+		{
+			cout<<"Stack is empty"<<endl;
+		}
+		else
+		{
+			temp = head;
+			while(temp!=NULL)
+			{
+				cout<<temp->data<<" ";
+				temp = temp->next;
+			}
+		}
+		cout<<endl;
+	}
+};
