@@ -29,3 +29,20 @@ class Stack
 			front = temp;
 		}
 	}
+	void pop()
+	{
+		if(head == NULL)
+		{
+			cout<<"Stack Underflow"<<endl;
+		}
+		else
+		{
+			Node *temp = head;
+			head = head->next;
+			delete(temp);
+		}
+	}
+	void top()
+	{
+		cout<<head->data<<endl;
+	}
