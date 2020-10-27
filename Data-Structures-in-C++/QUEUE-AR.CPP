@@ -42,3 +42,27 @@ void Display()
 		cout<<endl;
 	}
 }
+void main()
+{
+	int choice;
+	cout<<"1. Insert element to queue"<<endl;
+	cout<<"2. Delete element from queue"<<endl;
+	cout<<"3. Display elements of the queue"<<endl;
+	cout<<"4. Exit"<<endl;
+	do
+	{
+	cout<<"Enter choice: ";
+	cin>>choice;
+	switch(choice)
+	{
+		case 1: insert();
+			break;
+		case 2: Delete();
+			break;
+		case 3: display();
+			break;
+		case 4: exit(0);
+	}
+	}while(choice<4);
+}
+
