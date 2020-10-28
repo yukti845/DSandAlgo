@@ -53,3 +53,19 @@ class Queue
 			cout<<endl;
 		}
 };
+void main()
+{
+	Queue q;
+	clrscr();
+	q.Enqueue(36);
+	q.Enqueue(10);
+	q.Enqueue(5);
+	q.Enqueue(92);
+	q.Enqueue(87);
+	q.Enqueue(18);
+	q.display();
+	q.Dequeue();
+	q.Dequeue();
+	q.display();
+	getch();
+}
