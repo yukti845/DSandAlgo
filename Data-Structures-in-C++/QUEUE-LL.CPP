@@ -14,4 +14,27 @@ class Queue
 		{
 			front = rear = NULL;
 		}
+		void Enqueue(int value)
+		{
+			Node *new_node = new Node;
+			new_node->data = value;
+			if(rear == NULL)
+			{
+				front = rear = new_node;
+				return;
+			}
+			rear->next = new_node;
+			rear = new_node;
+		}
+		void Dequeue()
+		{
+			if(front == NULL)
+			{
+				cout<<"Queue is empty"<<endl;
+				return;
+			}
+			Node *temp = front;
+			front = front->next;
+			delete(temp);
+		}
 };
