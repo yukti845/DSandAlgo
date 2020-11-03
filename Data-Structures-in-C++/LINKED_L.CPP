@@ -96,6 +96,12 @@ class linked_list
 					return;
 
 				Node* current = temp;
+				while(temp->next != NULL)
+				temp = temp->next;
+
+				temp->next = head;
+				current->next = NULL;
+		}
 		//function to reverse the linked list
 		void reverse()
 		{
