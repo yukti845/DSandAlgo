@@ -79,6 +79,23 @@ class linked_list
 				count++;
 			}
 		}
+		// function to rotate the linked list by number of rotation=k
+		void rotate(int k)
+		{
+			int count=1;
+			if(k==0)
+				return;
+
+				Node* temp = head;
+				while(count < k && temp != NULL)
+				{
+					temp = temp->next;
+					count++;
+				}
+				if(temp == NULL)
+					return;
+
+				Node* current = temp;
 		//function to reverse the linked list
 		void reverse()
 		{
