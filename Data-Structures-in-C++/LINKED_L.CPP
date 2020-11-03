@@ -141,6 +141,8 @@ void main()
 	l.display();
 	l.reverse();
 	l.display();
+	l.rotate(3);
+	l.display();
 	getch();
 }
 
