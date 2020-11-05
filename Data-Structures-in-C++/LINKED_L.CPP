@@ -88,6 +88,8 @@ class linked_list
 				count++;
 				temp = temp->next;
 			}
+			cout<<"The number of nodes are: "<<count;
+		}
 		// function to rotate the linked list by number of rotation=k
 		void rotate(int k)
 		{
