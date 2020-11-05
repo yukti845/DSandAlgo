@@ -154,6 +154,7 @@ void main()
 	l.display();
 	l.rotate(3);
 	l.display();
+	l.get_count();
 	getch();
 }
 
