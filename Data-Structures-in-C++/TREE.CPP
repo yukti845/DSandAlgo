@@ -44,4 +44,15 @@ void inorder(Node* root)
 	cout<<root->data<<" ";
 	inorder(root->right);
 }
-
+void main()
+{
+	Node* root = NULL;
+	clrscr();
+	insert_node(root, 94);
+	insert_node(root, 62);
+	insert_node(root, 20);
+	insert_node(root, 39);
+	insert_node(root, 58);
+	inorder(root);
+	getch();
+}
