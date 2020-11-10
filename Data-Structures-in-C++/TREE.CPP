@@ -19,4 +19,21 @@ Node* create_node(int value)
 	new_node->left = new_node->right = NULL;
 	return new_node;
 }
+Node* insert_node(Node* root, int value)
+{
+	if(root==NULL)
+	{
+		root = create_node(value);
+		return root;
+	}
+	else if(value < root->data)
+	{
+		root->left = insert_node(root->left, value);
+	}
+	else
+	{
+		root->right = insert_node(root->right, value);
+	}
+	return root;
+}
 
