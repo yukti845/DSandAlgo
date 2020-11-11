@@ -7,3 +7,20 @@ struct Node
 	Node* left;
 	Node* right;
 };
+class bst
+{
+	Node* root;
+
+	Node* makeEmpty(Node* root)
+	{
+		if(root == NULL)
+			return NULL;
+		else
+		{
+			makeEmpty(root->left);
+			makeEmpty(root->right);
+			delete root;
+		}
+		return NULL;
+	}
+};
