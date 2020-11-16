@@ -23,4 +23,19 @@ class bst
 		}
 		return NULL;
 	}
+	Node*  insert(int value, Node* root)
+	{
+		if(root == NULL)
+		{
+			root = new Node;
+			root->data = value;
+			root->left = root->right = NULL;
+		}
+		else if(value < root->data)
+			root->left = insert(value, root->right);
+		else if(value > root->data)
+			root->right = insert(value, root->right);
+		return root;
+	}
+	
 };
