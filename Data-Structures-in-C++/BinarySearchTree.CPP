@@ -45,4 +45,9 @@ class bst
 		cout<<root->data<<" ";
 		inorder(root->right);
 	}
+	void display()
+	{
+		inorder(root);
+		cout<<endl;
+	}
 };
