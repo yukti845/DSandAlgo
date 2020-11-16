@@ -51,3 +51,17 @@ class bst
 		cout<<endl;
 	}
 };
+void main()
+{
+	clrscr();
+	bst t;
+	Node* root = NULL;
+	root = t.insert(30, root);
+	t.insert(94, root);
+	t.insert(39, root);
+	t.insert(28, root);
+	t.insert(83, root);
+	t.display();
+	getch();
+}
+
