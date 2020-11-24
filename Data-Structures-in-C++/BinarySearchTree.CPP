@@ -45,6 +45,16 @@ class bst
 		cout<<root->data<<" ";
 		inorder(root->right);
 	}
+	Node* remove(int value, Node* root)
+	{
+		Node^ temp;
+		if(root == NULL)
+			return NULL;
+		else if(value < root->data)
+			root->left = remove(value, root->left);
+		else if(value > root->data)
+			root->right = remove(value, root->right);
+
 	void display()
 	{
 		inorder(root);
