@@ -60,8 +60,17 @@ class bst
 			root->data = temp->data;
 			root->right = remove(root->data, root->right);
 		}
-		
-
+		else
+		{
+			temp = root;
+			if(root->left == NULL)
+				root = root->right;
+			else if(root->right == NULL)
+				root = root->left;
+			delete temp;
+		}
+		return temp;
+	}
 	void display()
 	{
 		inorder(root);
