@@ -54,6 +54,13 @@ class bst
 			root->left = remove(value, root->left);
 		else if(value > root->data)
 			root->right = remove(value, root->right);
+		else if(root->left && root->right)
+		{
+			temp = find_min(root->right);
+			root->data = temp->data;
+			root->right = remove(root->data, root->right);
+		}
+		
 
 	void display()
 	{
