@@ -7,16 +7,7 @@ class Hashtable:
     def hash(self, key):
         return len(key) % self.bucket
 
-    def put(self, key, value):
-        hash_value = self.hash(key)
-        reference = self.hashmap[hash_value]
-        for i in range(len(reference)):
-            if reference[i][0] == key:
-                reference[i][1] = value
-                return None
-        reference.append([key, value])
-        return None
-
+    
     def get(self, key):
         hash_value = self.hash(key)
         reference = self.hashmap[hash_value]
