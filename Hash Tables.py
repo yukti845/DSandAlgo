@@ -24,7 +24,15 @@ class Hashtable:
             if reference[i][0] == key:
                 return reference[i][1]
         return -1
-
+    
+    def remove(self, key):
+        hash_value = self.hash(key)
+        reference  = self.hashmap[hash_value]
+        for i in range(len(reference)):
+            if reference[i][0] == key:
+                reference.pop(i)
+                return None
+        return None
     
 
 h = Hashtable()
