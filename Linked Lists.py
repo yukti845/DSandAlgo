@@ -139,7 +139,6 @@ class LinkedList:
         return head
 
 
-'''
     def reverse(self):
         prev = None
         self.tail = self.head
@@ -148,7 +147,7 @@ class LinkedList:
             self.head = self.head.next
             temp.next = prev
             prev = temp
-            self.head = temp'''
+            self.head = temp
 
 
 l = LinkedList()
