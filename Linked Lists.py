@@ -148,6 +148,31 @@ class LinkedList:
             prev = temp
             temp = next
         self.head = prev
+        
+    # comparing two linked lists
+    def compare_lists(llist1, llist2):
+        temp1 = llist1
+        temp2 = llist2
+        count1 = 0
+        same = 0 
+        count2 = 0
+        while(temp1.next != None and temp2.next != None):
+            if(temp1.data == temp2.data):
+                same+=1
+                temp1 = temp1.next
+                temp2 = temp2.next
+    temp1 = llist1
+    temp2 = llist2
+    while(temp1.next != None):
+        count1+=1
+        temp1 = temp1.next
+    while(temp2.next != None):
+        count2+=1
+        temp2 = temp2.next
+    if(count1 == count2 and same == count1):
+        return 1
+    else: 
+        return 0
 
 
 l = LinkedList()
