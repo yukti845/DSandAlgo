@@ -161,18 +161,18 @@ class LinkedList:
                 same+=1
                 temp1 = temp1.next
                 temp2 = temp2.next
-    temp1 = llist1
-    temp2 = llist2
-    while(temp1.next != None):
-        count1+=1
-        temp1 = temp1.next
-    while(temp2.next != None):
-        count2+=1
-        temp2 = temp2.next
-    if(count1 == count2 and same == count1):
-        return 1
-    else: 
-        return 0
+        temp1 = llist1
+        temp2 = llist2
+        while(temp1.next != None):
+            count1+=1
+            temp1 = temp1.next
+        while(temp2.next != None):
+            count2+=1
+            temp2 = temp2.next
+        if(count1 == count2 and same == count1):
+            return 1
+        else: 
+            return 0
 
 
 l = LinkedList()
