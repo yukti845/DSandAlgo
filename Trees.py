@@ -115,5 +115,14 @@ def preOrder(root):
         print(root.info, end=" ")
         preOrder(root.left)
         preOrder(root.right)
+        
+def postOrder(root):
+    #Write your code here
+    if root is None:
+        return
+    else:
+        postOrder(root.left)
+        postOrder(root.right)
+        print(root.info, end=" ")
 
 
