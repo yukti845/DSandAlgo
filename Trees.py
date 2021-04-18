@@ -133,3 +133,14 @@ def inOrder(root):
         inOrder(root.left)
         print(root.info, end=" ")
         inOrder(root.right)
+        
+def height(root):
+    if root:
+        leftHeight = height(root.left)
+        rightHeight = height(root.right)
+        
+        if(leftHeight > rightHeight):
+            return leftHeight + 1
+        else:
+            return rightHeight + 1
+    return 0
