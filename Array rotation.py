@@ -20,6 +20,13 @@ for i in range(T):
     for j in range(N):
         print(a[j])
     print('')
+    
+# Method 2
+def rotLeft(a, d):
+    for i in range(d):
+        ele = a.pop(0)
+        a.append(ele)
+    return a
 
 # Hourglass max sum problem
 def hourglassSum(arr):
