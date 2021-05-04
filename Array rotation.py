@@ -44,3 +44,8 @@ def minimumSwaps(arr):
     for i in range(0,n):
         if(arr[i]==i+1):
             continue
+        else:
+            e = arr.index(i+1)
+            arr[i], arr[e] = arr[e], arr[i]
+            count+=1
+    return count 
