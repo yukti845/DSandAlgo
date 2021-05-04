@@ -39,3 +39,8 @@ def hourglassSum(arr):
     return max(sum_hour)
 
 # Minimum swaps
+def minimumSwaps(arr):
+    count=0
+    for i in range(0,n):
+        if(arr[i]==i+1):
+            continue
