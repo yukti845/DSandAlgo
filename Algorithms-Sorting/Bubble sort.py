@@ -5,9 +5,7 @@ def bubble_sort(arr):
     for i in range(s):
         for j in range(s-1):
             if arr[j] > arr[j+1]:
-                temp = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = temp
+                arr[j], arr[j+1] = arr[j+1], arr[j]
                 count+=1
     print("Array is sorted in",count,"swaps.")
     print("First Element:",a[0])
