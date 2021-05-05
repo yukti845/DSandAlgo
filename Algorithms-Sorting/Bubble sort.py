@@ -11,7 +11,7 @@ def bubble_sort(arr):
                 count+=1
     print("Array is sorted in",count,"swaps.")
     print("First Element:",a[0])
-    print("Last Element:", a[n-1])
+    print("Last Element:", a[s-1])
     return arr
 
 a = [37, 82, 49, 2, 13, 90, 56, 8, 63, 21]
