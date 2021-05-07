@@ -324,4 +324,14 @@ myq.printt()
 x = myq.peek()
 print(x)
 
-
+# Strings
+def maximumToys(prices, k):
+    # Write your code here
+    #num_toys=[]
+    Sum=0
+    count=0
+    for i in range(len(prices)):
+        if(Sum+prices[i]<=k):
+            Sum+=prices[i]
+            count+=1
+    return count
