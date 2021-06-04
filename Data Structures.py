@@ -332,3 +332,16 @@ def maximumToys(prices, k):
             Sum+=prices[i]
             count+=1
     return count
+
+# Happy number
+def isHappy(self, n: int) -> bool:
+        #result = 0
+        sq=0
+        while(n!=0):
+            r = n%10
+            sq += r**2
+            n=n//10
+        if(sq==1):
+            return True
+        else:
+            isHappy(sq)
