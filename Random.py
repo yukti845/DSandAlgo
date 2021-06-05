@@ -353,3 +353,15 @@ def arrayPairSum(self, nums: List[int]) -> int:
         for i in range(0,len(nums),2):
             sums += nums[i]
         return sums
+    
+# Buddy strings leet code
+def buddyStrings(self, s: str, goal: str) -> bool:
+        count=0
+        for i in range(len(s)):
+            if(s[i]!=goal[i]):
+                count+=1
+        if(count==2):
+            return True
+        else:
+            return False                
+        
