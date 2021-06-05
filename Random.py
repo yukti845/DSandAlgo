@@ -345,3 +345,11 @@ def isHappy(self, n: int) -> bool:
             return True
         else:
             isHappy(sq)
+
+# Array partition leet code
+def arrayPairSum(self, nums: List[int]) -> int:
+        nums.sort()
+        sums=0
+        for i in range(0,len(nums),2):
+            sums += nums[i]
+        return sums
