@@ -364,4 +364,28 @@ def buddyStrings(self, s: str, goal: str) -> bool:
             return True
         else:
             return False                
+  
+# Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
+ def backspaceCompare(self, s: str, t: str) -> bool:
+        a = []
+        b = []
+       # s = list(s)
+        #t = list(t)
+        for i in s:
+            if(not a and i=="#"):
+                continue
+            elif(i == "#"):
+                #s.pop(i)
+                a.pop()
+            else:
+                a.append(i)
+        for i in t:
+            if(not b and i=="#"):
+                continue
+            elif(i == "#"):
+                #t.pop(i)
+                b.pop()
+            else:
+                b.append(i)
+        return a==b         
         
