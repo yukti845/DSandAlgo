@@ -369,13 +369,10 @@ def buddyStrings(self, s: str, goal: str) -> bool:
  def backspaceCompare(self, s: str, t: str) -> bool:
         a = []
         b = []
-       # s = list(s)
-        #t = list(t)
         for i in s:
             if(not a and i=="#"):
                 continue
             elif(i == "#"):
-                #s.pop(i)
                 a.pop()
             else:
                 a.append(i)
@@ -383,7 +380,6 @@ def buddyStrings(self, s: str, goal: str) -> bool:
             if(not b and i=="#"):
                 continue
             elif(i == "#"):
-                #t.pop(i)
                 b.pop()
             else:
                 b.append(i)
