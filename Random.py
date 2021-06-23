@@ -384,4 +384,14 @@ def buddyStrings(self, s: str, goal: str) -> bool:
             else:
                 b.append(i)
         return a==b         
-        
+# to check if a number is a power of 3, without loop
+def isPowerOfThree(self, n: int) -> bool:
+        import math
+        if n<=0:
+            return False
+        x = math.log10(n)/math.log10(3)
+       # y = math.log10(n)//math.log10(3)
+        if(x%1==0):
+            return True
+        else:
+            return False
