@@ -395,3 +395,16 @@ def isPowerOfThree(self, n: int) -> bool:
             return True
         else:
             return False
+
+# Given a positive integer num, write a function which returns True if num is a perfect square else False.
+def isPerfectSquare(self, num: int) -> bool:
+        if(num==1):
+            return True
+        for i in range(1,(num//2)+1):
+            x = i*i
+            if(x==num):
+                return True
+            elif(x>num):
+                return False
+            else: 
+                continue
