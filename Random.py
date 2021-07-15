@@ -408,3 +408,19 @@ def isPerfectSquare(self, num: int) -> bool:
                 return False
             else: 
                 continue
+# Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside 
+# the signed 32-bit integer range [-231, 231 - 1], then return 0.
+def reverse(self, x: int) -> int:
+        a = pow(-2,31)
+        b = pow(2,31) - 1
+        r=0
+        while(x!=0):
+            l = x%10
+            r = r*10 + l
+            x = x//10
+        x = r
+        if(x<a or x>b):
+            return 0
+        else:
+            return x
+            
